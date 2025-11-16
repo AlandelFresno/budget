@@ -2,30 +2,31 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
+// PrimeNG Modules
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
 import { TooltipModule } from 'primeng/tooltip';
 
-import { DashboardPage } from './dashboard.page';
-import { CurrencyRatesWidgetComponent } from '../../components/currency-rates-widget/currency-rates-widget.component';
+// Component
+import { BillingPage } from './billing.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardPage
+    component: BillingPage
   }
 ];
 
 @NgModule({
-  declarations: [
-    DashboardPage,
-    CurrencyRatesWidgetComponent
-  ],
+  declarations: [BillingPage],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
     ButtonModule,
+    DialogModule,
     TooltipModule
   ]
 })
-export class DashboardModule { }
+export class BillingModule { }

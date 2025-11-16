@@ -4,28 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { DialogModule } from 'primeng/dialog';
 
-import { DashboardPage } from './dashboard.page';
-import { CurrencyRatesWidgetComponent } from '../../components/currency-rates-widget/currency-rates-widget.component';
+import { FuelPage } from './fuel.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardPage
+    component: FuelPage
   }
 ];
 
 @NgModule({
   declarations: [
-    DashboardPage,
-    CurrencyRatesWidgetComponent
+    FuelPage
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    DialogModule
   ]
 })
-export class DashboardModule { }
+export class FuelModule { }
